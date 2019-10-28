@@ -1,23 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
+import stonk from './stonks.png';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="home-header">
+      <div className="stonk">
+      <img src={stonk} alt="Logo Placeholder" align="left"></img>
+      <h1 id="title-header">gTrade</h1>
+      </div>
+      <div className="main-content"> 
+        
+      </div>
       </header>
     </div>
   );
