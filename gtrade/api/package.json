@@ -10,6 +10,7 @@
   "author": "Gibonacci Sequence",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "google-trends-api": "^4.9.0"
   }
 }
