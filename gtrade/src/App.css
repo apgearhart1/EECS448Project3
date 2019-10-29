@@ -41,3 +41,30 @@ html{
 .App-link {
   color: aqua;
 }
+#main-content{
+  text-align: center;
+  
+}
+form {
+  text-align: center;
+  margin-top: 14%;
+}
+
+
+option{
+  width: 400px;
+  font-size: 40px;
+  background-color: rgb(114, 130, 146);
+  color: rgb(51, 185, 141);
+}
+
+input[type=submit] {
+  font-size: 1em;
+}
+
+#desc {
+  font-size: 30px;
+  color: rgb(51, 185, 141);
+  text-align: center;
+  padding-top: 3%;
+}
