@@ -17,6 +17,7 @@ function App() {
       <h2>Choose a stock to get recent trends and analysis!</h2>
       </div>
         <form id="stocks-chosen">
+          
         <select multiple>
           <option>Choose a Stock!</option>
           <option value="Apple">Apple</option>

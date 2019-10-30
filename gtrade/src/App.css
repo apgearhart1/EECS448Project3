@@ -56,6 +56,17 @@ option{
   font-size: 40px;
   background-color: rgb(114, 130, 146);
   color: rgb(51, 185, 141);
+  border: 1px rgb(100, 218, 179);
+}
+
+option:hover {
+  color: rgb(114, 130, 146);
+  background: rgb(51, 185, 141);
+  }
+
+option:active{
+  color: whitesmoke;
+  background: rgb(51, 185, 141);
 }
 
 input[type=submit] {
