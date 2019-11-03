@@ -15,4 +15,4 @@ app.get('/trends/:company', function (req, res) {
     res.send("Trend for company: " + req.params.company);
 });
 
-app.listen(port, () => console.log(`API listening on port ${port}!`))
+app.listen(port, () => console.log(`API listening on port ${port}!`));

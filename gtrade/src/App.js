@@ -3,6 +3,9 @@ import stonk from './stonks.png';
 import './App.css';
 
 function App() {
+  function getTrends() {
+    console.log(123);
+  }
   return (
     <div className="App">
       <header className="home-header">
@@ -34,7 +37,7 @@ function App() {
           <option value="uber">Uber</option>
         </select>
           <br></br>
-          <input type="submit" value="Submit" ></input>
+          <button type='button' onClick={getTrends}>Submit</button>
         </form>
       </div>
       </header>
@@ -43,3 +46,21 @@ function App() {
 }
 
 export default App;
+
+
+// import React from 'react';
+
+// function App() {
+
+//   function sayHello() {
+//     console.log(321);
+//   }
+  
+//   return (
+//     <button onClick={sayHello}>
+//       Click me!
+//     </button>
+//   );
+// }
+
+// export default App;
