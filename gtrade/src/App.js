@@ -5,9 +5,12 @@ import urlArray from './Links/Links.js';
 const googleTrends = require('google-trends-api');
 
 function App() {
-  /* Calls other functions to determine if stock is trending
-    
-  */
+
+/**
+ * Calls other functions to determine if stock is trending
+ * @param none
+ * @returns none
+ */
   function getTrends() {
     const NewsAPI = require('newsapi');
     const newsapi = new NewsAPI('f88adea34f584c2ba358c1ce0783eb78');
@@ -25,10 +28,12 @@ function App() {
     getTrending();
     getTrendInterest("Google");
   }
-
-  /* Tell you the top trending stories related to business
-
-    */
+  
+/**
+ * Tell you the top trending stories related to business
+ * @param none
+ * @returns none
+ */
   function getTrending(){
       googleTrends.realTimeTrends({
           geo: 'US',
@@ -42,9 +47,12 @@ function App() {
         });
   }
 
-  /* Takes company name an returns interest over time
-    key - keyword of company
-    */
+
+  /**
+ * Takes company name an returns interest over time
+ * @param key - keyword of company
+ * @returns none
+ */
   function getTrendInterest(key){
       googleTrends.interestOverTime({keyword: key})
         .then(function(results){
@@ -55,9 +63,12 @@ function App() {
       });
 
   }
-  /* Returns true or false depending on trending or not
-      trending == True
-    */
+
+   /**
+   * Returns true or false depending on trending or not
+   * @param key - keyword of company
+   * @returns boolean whether stock is trending or not
+   */
   function isTrending(company){
     if(company=="Apple"){
       return true;
