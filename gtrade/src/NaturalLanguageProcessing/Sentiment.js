@@ -52,4 +52,8 @@ function getSentiment(URL, Company){
   setTimeout(function() {console.log(result)}, 4000);
   return result;
 }
+module.exports = {
+  getSentiment: getSentiment
+};
+
 getSentiment('https://www.breitbart.com/clips/2019/11/03/trump-i-think-nancy-pelosi-has-lost-her-mind/', 'Nancy');
