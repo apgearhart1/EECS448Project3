@@ -9,6 +9,10 @@ const naturalLanguageUnderstanding = new NaturalLanguageUnderstandingV1({
   url: 'https://gateway.watsonplatform.net/natural-language-understanding/api',
 });
 var result = [];
+/* Private function that gets the sentimate value from -1 to 1
+  inURL - url of news story
+  companyName - name of company
+*/
 function doCalc(inURL, companyName){
   console.log('The second one');
 
@@ -33,6 +37,10 @@ function doCalc(inURL, companyName){
     });
 
 }
+/* Wrapper of doCalc()
+    URL - url of news story
+    Company - name of company
+  */
 function getSentiment(URL, Company){
   doCalc(URL, Company);
   setTimeout(function() {console.log(result)}, 4000);
