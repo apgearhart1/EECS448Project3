@@ -6,7 +6,7 @@ const newsapi = new NewsAPI('f88adea34f584c2ba358c1ce0783eb78');
 let urlArray = [];
 
 // Fetch data with News API
-newsArticles = newsapi.v2.everything({
+let newsArticles = newsapi.v2.everything({
     qinTitle: '+Apple',
     q: '+Apple',
     sortBy: 'relevancy',
