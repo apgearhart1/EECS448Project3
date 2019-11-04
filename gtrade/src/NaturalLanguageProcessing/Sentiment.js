@@ -44,7 +44,7 @@ function doCalc(inURL, companyName){
 function getSentiment(URL, Company){
   doCalc(URL, Company);
   setTimeout(function() {console.log(result)}, 4000);
-  return result;
+  return;
 }
 module.exports = {
   getSentiment: getSentiment
