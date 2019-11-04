@@ -17,7 +17,7 @@ function App() {
       <h2>Choose a stock to get recent trends and analysis!</h2>
       </div>
         <form id="stocks-chosen">
-          
+        <div>
         <select multiple>
           <option>Choose a Stock!</option>
           <option value="Apple">Apple</option>
@@ -33,6 +33,7 @@ function App() {
           <option value="fb">Facebook</option>
           <option value="uber">Uber</option>
         </select>
+        </div>
           <br></br>
           <input type="submit" value="Submit" ></input>
         </form>
@@ -41,5 +42,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
