@@ -7,18 +7,12 @@ const googleTrends = require('google-trends-api');
 const sentiment = require("./NaturalLanguageProcessing/Sentiment.js");
 
 function App() {
-<<<<<<< HEAD
 
 /**
  * Calls other functions to determine if stock is trending
  * @param none
  * @returns none
  */
-=======
-  /* Calls other functions to determine if stock is trending
-
-  */
->>>>>>> 684efbea869d2709274c4bd00c282bd66af839cf
   function getTrends() {
     const NewsAPI = require('newsapi');
     const newsapi = new NewsAPI('f88adea34f584c2ba358c1ce0783eb78');
