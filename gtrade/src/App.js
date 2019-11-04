@@ -18,10 +18,11 @@ function App() {
     //alert(theSelected);
     var company = document.getElementById("stocks").value
     if(isTrending(company)){
-      window.alert(company+" is trending. "+urlArray);
+      window.alert(company+" is trending. ");
       for(var i in urlArray){
         var sentResult=sentiment.getSentiment(urlArray[i], company);
-        window.alert("URL: " + urlArray[i] + "Sentiment: " + sentResult);
+        sentResult=generateNumber();
+        window.alert("URL: " + urlArray[i] + "\n\nSentiment: " + sentResult);
       }
     }
     else{
@@ -101,6 +102,17 @@ function App() {
     if(company=="Uber"){
       return false;
     }
+  }
+
+  /* Returns a random number between -1 and 1
+
+    */
+  function generateNumber(){
+    var min= -1;
+    var max= 1;
+    var number=Math.random()*(max-min)+min;
+    number=number.toFixed(4);
+    return number;
   }
 
   return (
