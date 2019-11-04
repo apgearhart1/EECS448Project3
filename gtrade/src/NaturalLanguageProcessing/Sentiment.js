@@ -9,10 +9,13 @@ const naturalLanguageUnderstanding = new NaturalLanguageUnderstandingV1({
   url: 'https://gateway.watsonplatform.net/natural-language-understanding/api',
 });
 var result = [];
-/* Private function that gets the sentimate value from -1 to 1
-  inURL - url of news story
-  companyName - name of company
-*/
+
+/**
+   * Private function that gets the sentimate value from -1 to 1
+   * @param inURL - url of news story
+   * @param companyName - name of company
+   * @returns none
+   */
 function doCalc(inURL, companyName){
   console.log('The second one');
 
@@ -37,10 +40,13 @@ function doCalc(inURL, companyName){
     });
 
 }
-/* Wrapper of doCalc()
-    URL - url of news story
-    Company - name of company
-  */
+
+/**
+   * Wrapper of doCalc()
+   * @param URL - url of news story
+   * @param Company - name of company
+   * @returns none
+   */
 function getSentiment(URL, Company){
   doCalc(URL, Company);
   setTimeout(function() {console.log(result)}, 4000);
