@@ -20,7 +20,7 @@ newsArticles.then(response => {
         // Push URL strings onto array 
         urlArray.push(response.articles[i].url);
     }
-    console.log(urlArray);
+    //console.log(urlArray);
   });
 
 module.exports = urlArray;

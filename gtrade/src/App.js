@@ -1,20 +1,22 @@
 import React from 'react';
 import stonk from './stonks.png';
 import './App.css';
+import urlArray from './Links/Links.js';
 const googleTrends = require('google-trends-api');
 
 function App() {
   function getTrends() {
-    console.log(123);
+    const NewsAPI = require('newsapi');
+    const newsapi = new NewsAPI('f88adea34f584c2ba358c1ce0783eb78');
     let selecter = document.getElementById("stocks");
     let theSelected = selecter.options[selecter.selectedIndex].value;
-    alert(theSelected);
+    //alert(theSelected);
     var company = document.getElementById("stocks").value
     if(isTrending(company)){
-      window.alert(company+" is trending")
+      window.alert(company+" is trending. "+urlArray);
     }
     else{
-      window.alert(company+" is NOT trending")
+      window.alert(company+" is NOT trending");
     }
 
     getTrending();
