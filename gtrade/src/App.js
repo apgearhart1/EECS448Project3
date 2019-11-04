@@ -4,7 +4,9 @@ import './App.css';
 
 function App() {
   function getTrends() {
-    console.log(123);
+    let selecter = document.getElementById("stocks");
+    let theSelected = selecter.options[selecter.selectedIndex].value;
+    alert(theSelected);
   }
   return (
     <div className="App">
@@ -21,7 +23,7 @@ function App() {
       </div>
         <form id="stocks-chosen">
         <div>
-        <select multiple>
+        <select multiple id="stocks">
           <option>Choose a Stock!</option>
           <option value="Apple">Apple</option>
           <option value="Google">Google</option>
