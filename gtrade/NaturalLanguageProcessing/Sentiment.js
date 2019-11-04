@@ -38,4 +38,4 @@ function getSentiment(URL, Company){
   setTimeout(function() {console.log(result)}, 4000);
   return result;
 }
-getSentiment('https://www.wsj.com/articles/mcdonalds-fires-ceo-steve-easterbrook-over-relationship-with-employee-11572816660', 'McDonald’s');
+getSentiment('https://www.breitbart.com/clips/2019/11/03/trump-i-think-nancy-pelosi-has-lost-her-mind/', 'Nancy');
