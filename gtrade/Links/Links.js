@@ -1,7 +1,7 @@
 const NewsAPI = require('newsapi');
 const newsapi = new NewsAPI('f88adea34f584c2ba358c1ce0783eb78');
 
-let titleArray = [];
+let urlArray = [];
 
 newsArticles = newsapi.v2.everything({
     qinTitle: '+Apple',
@@ -13,7 +13,7 @@ newsArticles = newsapi.v2.everything({
 newsArticles.then(response => {
     for (let i = 0; i < response.articles.length; i++)
     {
-        titleArray.push(response.articles[i].title);
+        urlArray.push(response.articles[i].url);
     }
-    console.log(titleArray);
+    //console.log(urlArray);
   });
