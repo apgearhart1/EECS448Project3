@@ -5,6 +5,9 @@ import urlArray from './Links/Links.js';
 const googleTrends = require('google-trends-api');
 
 function App() {
+  /* Calls other functions to determine if stock is trending
+    
+  */
   function getTrends() {
     const NewsAPI = require('newsapi');
     const newsapi = new NewsAPI('f88adea34f584c2ba358c1ce0783eb78');
@@ -23,6 +26,9 @@ function App() {
     getTrendInterest("Google");
   }
 
+  /* Tell you the top trending stories related to business
+
+    */
   function getTrending(){
       googleTrends.realTimeTrends({
           geo: 'US',
@@ -36,6 +42,9 @@ function App() {
         });
   }
 
+  /* Takes company name an returns interest over time
+    key - keyword of company
+    */
   function getTrendInterest(key){
       googleTrends.interestOverTime({keyword: key})
         .then(function(results){
@@ -46,7 +55,9 @@ function App() {
       });
 
   }
-
+  /* Returns true or false depending on trending or not
+      trending == True
+    */
   function isTrending(company){
     if(company=="Apple"){
       return true;
