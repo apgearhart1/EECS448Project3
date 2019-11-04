@@ -2,11 +2,13 @@ import React from 'react';
 import stonk from './stonks.png';
 import './App.css';
 import urlArray from './Links/Links.js';
+
 const googleTrends = require('google-trends-api');
+const sentiment = require("./NaturalLanguageProcessing/Sentiment.js");
 
 function App() {
   /* Calls other functions to determine if stock is trending
-    
+
   */
   function getTrends() {
     const NewsAPI = require('newsapi');
@@ -17,6 +19,10 @@ function App() {
     var company = document.getElementById("stocks").value
     if(isTrending(company)){
       window.alert(company+" is trending. "+urlArray);
+      for(var i in urlArray){
+        var sentResult=sentiment.getSentiment(urlArray[i], company);
+        window.alert("URL: " + urlArray[i] + "Sentiment: " + sentResult);
+      }
     }
     else{
       window.alert(company+" is NOT trending");
