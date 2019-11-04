@@ -6,7 +6,10 @@ const googleTrends = require('google-trends-api');
 function App() {
   function getTrends() {
     console.log(123);
-    var company = document.getElementById("companyName").value
+    let selecter = document.getElementById("stocks");
+    let theSelected = selecter.options[selecter.selectedIndex].value;
+    alert(theSelected);
+    var company = document.getElementById("stocks").value
     if(isTrending(company)){
       window.alert(company+" is trending")
     }
@@ -39,6 +42,7 @@ function App() {
         .catch(function(err){
           console.log('Error: '+err);
       });
+
   }
 
   function isTrending(company){
@@ -95,7 +99,7 @@ function App() {
       </div>
         <form id="stocks-chosen">
         <div>
-        <select multiple id="companyName">
+        <select multiple id="stocks">
           <option>Choose a Stock!</option>
           <option value="Apple">Apple</option>
           <option value="Google">Google</option>
